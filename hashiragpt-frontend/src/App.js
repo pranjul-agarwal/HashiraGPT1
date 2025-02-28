@@ -14,7 +14,7 @@ function App() {
     setMessage("");
 
     try {
-      const res = await axios.post("http://localhost:3000/api/content", { question: message });
+      const res = await axios.post("https://hashiragpt1.onrender.com/api/content", { question: message });
       setChat([...newChat, { type: "bot", text: res.data.result }]);
     } catch (error) {
       console.error("Error:", error);
